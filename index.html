@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOLDOVA | Tradiție și Eleganță</title>
+    <!-- Fonturi de lux cu suport perfect pentru diacritice -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* === RESETARE ȘI VARIABILE === */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --alb: #ffffff;
+            --gri-foarte-deschis: #fafafa;
+            --gri-deschis: #f0f0f0;
+            --gri-mediu: #999999;
+            --text-inchis: #222222;
+            --text-mediu: #555555;
+            --visiniu: #722F37; /* Culoarea vinului / Bordeaux */
+            /* Tricolor subtil pentru accente */
+            --tricolor: linear-gradient(to right, #0033A0 33%, #FFD100 33%, #FFD100 66%, #C8102E 66%);
+            /* Curbura elegantă a colțurilor */
+            --radius: 16px;
+            /* Umbre subtile dar remarcabile */
+            --umbra-statica: 0 12px 35px rgba(0, 0, 0, 0.07);
+            --umbra-hover: 0 20px 45px rgba(0, 0, 0, 0.12);
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-inchis);
+            background-color: var(--alb);
+            overflow-x: hidden;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Lora', serif;
+            font-weight: 400;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        /* === NAVIGAȚIE MINIMALISTĂ === */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 25px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid var(--gri-deschis);
+            transition: all 0.3s ease;
+        }
+
+        .logo {
+            color: var(--text-inchis);
+            font-family: 'Lora', serif;
+            font-size: 1.6em;
+            letter-spacing: 4px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .nav-links { display: flex; gap: 40px; }
+
+        .nav-links a {
+            color: var(--text-mediu);
+            text-decoration: none;
+            font-size: 0.8em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            position: relative;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover { color: var(--visiniu); }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0; height: 1px;
+            bottom: -5px; left: 0;
+            background-color: var(--visiniu);
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover::after { width: 100%; }
+
+        /* === SLIDESHOW HERO === */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--alb);
+            animation: heroFade 24s infinite;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.35);
+            z-index: 1;
+        }
+
+        @keyframes heroFade {
+            0%, 50% { background-image: url('imagini/catedrala.jpg'); }
+            50%, 100% { background-image: url('imagini/catedrala1.jpeg'); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.8em;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            background-color: transparent;
+            color: var(--alb);
+            border: 1px solid var(--alb);
+            text-decoration: none;
+            font-size: 0.85em;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+            display: inline-block;
+            border-radius: 40px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn:hover {
+            background-color: var(--alb);
+            color: var(--text-inchis);
+        }
+
+        /* === SECȚIUNI GENERALE === */
+        section { padding: 120px 10%; }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.2em;
+            color: var(--text-inchis);
+            margin-bottom: 70px;
+            letter-spacing: 2px;
+        }
+
+        /* === ISTORIE ȘI ELEGANȚĂ === */
+        #istorie { background-color: var(--alb); }
+        
+        .history-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-bottom: 100px; /* Spațiu între cele 3 rânduri de istorie */
+        }
+
+        .history-container:last-child {
+            margin-bottom: 0;
+        }
+
+        .history-text h3 {
+            font-size: 1.8em;
+            color: var(--visiniu);
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .history-text p {
+            color: var(--text-mediu);
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .history-image img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius);
+            filter: grayscale(15%);
+            box-shadow: var(--umbra-statica); 
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+        
+        .history-image img:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--umbra-hover);
+        }
+
+        /* === FAIMOASĂ PENTRU... === */
+        #faimoasa { background-color: var(--gri-foarte-deschis); }
+        
+        .famous-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .famous-item {
+            padding: 30px;
+            border: 1px solid transparent; 
+            background: var(--alb);
+            border-radius: var(--radius);
+            transition: all 0.4s ease;
+            box-shadow: var(--umbra-statica);
+        }
+
+        .famous-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--umbra-hover);
+        }
+
+        /* Stil pentru pozele adăugate în secțiunea Excelență */
+        .famous-img-wrapper {
+            width: 100%;
+            height: 200px;
+            border-radius: calc(var(--radius) - 4px); /* Rotunjire fină pe interior */
+            overflow: hidden;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+
+        .famous-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .famous-item:hover .famous-img-wrapper img {
+            transform: scale(1.08); /* Mărire la hover */
+        }
+
+        .famous-item h3 {
+            font-size: 1.4em;
+            color: var(--text-inchis);
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .famous-item p {
+            color: var(--text-mediu);
+            font-size: 0.95em;
+        }
+
+        /* === DESTINAȚII === */
+        #destinatii { background-color: var(--alb); }
+        
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background: var(--gri-foarte-deschis);
+            border-radius: var(--radius);
+            overflow: hidden; 
+            transition: all 0.5s ease;
+            position: relative;
+            box-shadow: var(--umbra-statica);
+        }
+
+        .card:hover { 
+            transform: translateY(-10px); 
+            box-shadow: var(--umbra-hover);
+        }
+
+        .card-img-wrapper {
+            position: relative;
+            height: 350px;
+            overflow: hidden;
+        }
+
+        .card-img-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--tricolor);
+            z-index: 2;
+        }
+
+        .card-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1s ease;
+        }
+
+        .card:hover .card-img-wrapper img { transform: scale(1.05); }
+
+        .card-content {
+            padding: 35px 25px;
+            text-align: center;
+        }
+
+        .card-content h3 {
+            color: var(--text-inchis);
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            letter-spacing: 1px;
+        }
+
+        .card-content p { color: var(--text-mediu); font-size: 0.9em; }
+
+        /* === GALERIE FOTO MINIMALISTĂ === */
+        #galerie { 
+            background-color: var(--text-inchis); 
+            color: var(--alb); 
+            padding-bottom: 120px;
+        }
+        
+        #galerie .section-title { color: var(--alb); }
+        
+        .slider-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: var(--radius);
+            overflow: hidden; 
+            box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+        }
+
+        input[name="slider"] { display: none; }
+
+        .slides {
+            display: flex;
+            width: 300%; 
+            transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .slide {
+            width: 33.333%;
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+
+        #slide1:checked ~ .slides { transform: translateX(0%); }
+        #slide2:checked ~ .slides { transform: translateX(-33.333%); }
+        #slide3:checked ~ .slides { transform: translateX(-66.666%); }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--alb);
+            background: rgba(0,0,0,0.2);
+            border-radius: 50%; 
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: 300;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            font-family: Arial, sans-serif; 
+        }
+
+        .nav-btn:hover { 
+            color: var(--alb); 
+            background: var(--visiniu); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .prev-btn { left: 20px; }
+        .next-btn { right: 20px; }
+
+        /* === FOOTER MINIMALIST === */
+        footer {
+            background: var(--alb);
+            color: var(--text-inchis);
+            text-align: center;
+            padding: 80px 20px 40px;
+            border-top: 1px solid var(--gri-deschis);
+        }
+
+        footer h2 {
+            font-size: 1.5em;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+
+        footer p {
+            color: var(--text-mediu);
+            font-size: 0.85em;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 900px) {
+            .history-container { grid-template-columns: 1fr; gap: 40px; margin-bottom: 60px; }
+            nav { padding: 20px; flex-direction: column; gap: 20px; }
+            .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; }
+            .hero-content h1 { font-size: 2.5em; }
+            section { padding: 80px 5%; }
+            .slide img { height: 400px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGAȚIE -->
+    <nav>
+        <a href="#" class="logo">Moldova</a>
+        <div class="nav-links">
+            <a href="#istorie">Istorie</a>
+            <a href="#faimoasa">Excelență</a>
+            <a href="#destinatii">Destinații</a>
+            <a href="#galerie">Colecție</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>O Călătorie în Inima Europei</h1>
+            <p>Eleganță, tradiție și patrimoniu ascuns.</p>
+            <a href="#istorie" class="btn">Descoperă Mai Mult</a>
+        </div>
+    </header>
+
+    <!-- ISTORIE -->
+    <section id="istorie">
+        <h2 class="section-title">Moștenirea Timpului</h2>
+        
+        <!-- Bloc 1: Epoca de Aur -->
+        <div class="history-container">
+            <div class="history-text">
+                <h3>Epoca de Aur</h3>
+                <p>Teritoriul Moldovei a fost conturat de-a lungul secolelor sub domnia marilor voievozi, cea mai de seamă perioadă fiind guvernată de Ștefan cel Mare. Arhitectura cetăților fortificate stă și astăzi mărturie a unei istorii bogate și tumultuoase.</p>
+                <p>Aflată la confluența marilor imperii, cultura locului s-a rafinat, integrând influențe estice și vestice într-o identitate autentică, definită de artă, credință și un profund respect pentru pământ.</p>
+            </div>
+            <div class="history-image">
+                <img src="imagini/stefan.jpeg" alt="Ștefan cel Mare">
+            </div>
+        </div>
+
+        <!-- Bloc 2: Cetatea Soroca (Aranjat invers pentru eleganță: Poză - Text) -->
+        <div class="history-container">
+            <div class="history-image">
+                <!-- Pune poza cu Soroca în folderul imagini -->
+                <img src="imagini/cetatea.jpeg" alt="Cetatea Soroca">
+            </div>
+            <div class="history-text">
+                <h3>Patrimoniu Istoric și Cultural</h3>
+                <p>Situată pitoresc pe malul râului Nistru, <strong>Cetatea Soroca</strong> reprezintă una dintre cele mai importante fortificații militare din piatră construite de Ștefan cel Mare. Cu arhitectura sa circulară unică, a fost un bastion defensiv crucial împotriva invaziilor otomane și tătare.</p>
+                <p>Această bijuterie medievală continuă să fie un simbol al rezistenței și păstrează vie memoria vremurilor eroice, atrăgând vizitatori dornici să pășească pe urmele voievozilor.</p>
+            </div>
+        </div>
+
+        <!-- Bloc 3: Mănăstirea Căpriana (Aranjat clasic: Text - Poză) -->
+        <div class="history-container">
+            <div class="history-text">
+                <h3>Spiritualitate și Religie</h3>
+                <p>Așezată în inima codrilor seculari, <strong>Mănăstirea Căpriana</strong> este unul dintre cele mai vechi și sfinte lăcașuri de cult din țară, datând de la începutul secolului al XV-lea. A servit drept reședință pentru mitropoliții Moldovei și a fost patronată de domnitori iluștri.</p>
+                <p>Reprezentând nucleul spiritualității ortodoxe, complexul monahal emană o liniște profundă. Pelerinii sunt atrași de arhitectura bisericească rafinată și de atmosfera de pace absolută oferită de natura înconjurătoare.</p>
+            </div>
+            <div class="history-image">
+                <!-- Pune poza cu Căpriana în folderul imagini -->
+                <img src="imagini/capriana.jpeg" alt="Mănăstirea Căpriana">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAIMOASA (EXCELENȚĂ) -->
+    <section id="faimoasa">
+        <h2 class="section-title">Semnătura Moldovei</h2>
+        <div class="famous-grid">
+            
+            <div class="famous-item">
+                <div class="famous-img-wrapper">
+                    <!-- Pune poza cu vinul în folderul imagini -->
+                    <img src="imagini/culturavinului.jpeg" alt="Cultura Vinului">
+                </div>
+                <h3>Cultura Vinului</h3>
+                <p>Posedând cele mai vaste crame subterane din lume, Moldova cultivă arta viticolă cu o precizie și o pasiune transmise din generație în generație. Vinurile de Bordeaux au aici un rival demn de luat în seamă.</p>
+            </div>
+            
+            <div class="famous-item">
+                <div class="famous-img-wrapper">
+                    <!-- Pune poza culinară în folderul imagini -->
+                    <img src="imagini/artaculinara.jpeg" alt="Arta Culinară">
+                </div>
+                <h3>Arta Culinară</h3>
+                <p>Gastronomia locală este o simfonie a gusturilor naturale. Preparatele sunt create după rețete seculare, folosind ingrediente organice, oferind o experiență pură și autentică.</p>
+            </div>
+            
+            <div class="famous-item">
+                <div class="famous-img-wrapper">
+                    <!-- Pune poza cu tradițiile în folderul imagini -->
+                    <img src="imagini/covor.jpeg" alt="Tradiția Țesutului">
+                </div>
+                <h3>Tradiția Țesutului</h3>
+                <p>Covoarele moldovenești, incluse în patrimoniul UNESCO, sunt opere de artă realizate manual. Motivele geometrice și vegetale spun povești despre viață, natură și spiritualitate.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DESTINAȚII -->
+    <section id="destinatii">
+        <h2 class="section-title">Locuri Emblematice</h2>
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="imagini/orheiulvechi.jpeg" alt="Orheiul Vechi">
+                </div>
+                <div class="card-content">
+                    <h3>Orheiul Vechi</h3>
+                    <p>Un complex monahal de o valoare inestimabilă, sculptat în stâncă, oferind o perspectivă atemporală asupra văii Răutului.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="imagini/cricova1.jpeg" alt="Cramele Subterane">
+                </div>
+                <div class="card-content">
+                    <h3>Galeriile Subterane</h3>
+                    <p>Cricova și Mileștii Mici adăpostesc kilometri întregi de coridoare dedicate maturării celor mai nobile și exclusiviste vinuri.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <img src="imagini/chisinau.jpeg" alt="Chișinău">
+                </div>
+                <div class="card-content">
+                    <h3>Orașul Chișinău</h3>
+                    <p>O capitală verde, definită de arhitectură clasică, bulevarde largi și un ritm de viață care îmbină modernitatea cu tradiția.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIE -->
+    <section id="galerie">
+        <h2 class="section-title">Colecția Vizuală</h2>
+        
+        <div class="slider-container">
+            <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+
+            <div class="slides">
+                <div class="slide">
+                    <!-- Am schimbat și aici link-urile, pregătite pentru calculatorul tău -->
+                    <img src="imagini/galerie1.jpeg" alt="Liniște și Tradiție">
+                    <label for="slide3" class="nav-btn prev-btn">&#10094;</label>
+                    <label for="slide2" class="nav-btn next-btn">&#10095;</label>
+                </div>
+
+                <div class="slide">
+                    <img src="imagini/galerie2.jpeg" alt="Podgoriile Moldovei">
+                    <label for="slide1" class="nav-btn prev-btn">&#10094;</label>
+                    <label for="slide3" class="nav-btn next-btn">&#10095;</label>
+                </div>
+
+                <div class="slide">
+                    <img src="imagini/galerie3.jpeg" alt="Peisaje Pitorești">
+                    <label for="slide2" class="nav-btn prev-btn">&#10094;</label>
+                    <label for="slide1" class="nav-btn next-btn">&#10095;</label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>MOLDOVA</h2>
+        <p>MV NV ZD</p>
+    </footer>
+
+</body>
+</html>
