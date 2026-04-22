@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOLDOVA | Tradiție și Eleganță</title>
-    <!-- Fonturi de lux cu suport perfect pentru diacritice -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     
     <style>
-        /* === RESETARE ȘI VARIABILE === */
+       
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
@@ -20,12 +20,11 @@
             --gri-mediu: #999999;
             --text-inchis: #222222;
             --text-mediu: #555555;
-            --visiniu: #722F37; /* Culoarea vinului / Bordeaux */
-            /* Tricolor subtil pentru accente */
+            --visiniu: #722F37; 
             --tricolor: linear-gradient(to right, #0033A0 33%, #FFD100 33%, #FFD100 66%, #C8102E 66%);
-            /* Curbura elegantă a colțurilor */
+            
             --radius: 16px;
-            /* Umbre subtile dar remarcabile */
+          
             --umbra-statica: 0 12px 35px rgba(0, 0, 0, 0.07);
             --umbra-hover: 0 20px 45px rgba(0, 0, 0, 0.12);
         }
@@ -46,7 +45,7 @@
 
         html { scroll-behavior: smooth; }
 
-        /* === NAVIGAȚIE MINIMALISTĂ === */
+      
         nav {
             position: fixed;
             top: 0;
@@ -96,7 +95,7 @@
         }
         .nav-links a:hover::after { width: 100%; }
 
-        /* === SLIDESHOW HERO === */
+     
         .hero {
             height: 100vh;
             position: relative;
@@ -176,7 +175,7 @@
             letter-spacing: 2px;
         }
 
-        /* === ISTORIE ȘI ELEGANȚĂ === */
+       
         #istorie { background-color: var(--alb); }
         
         .history-container {
@@ -184,7 +183,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 80px;
             align-items: center;
-            margin-bottom: 100px; /* Spațiu între cele 3 rânduri de istorie */
+            margin-bottom: 100px; 
         }
 
         .history-container:last-child {
@@ -218,7 +217,7 @@
             box-shadow: var(--umbra-hover);
         }
 
-        /* === FAIMOASĂ PENTRU... === */
+      
         #faimoasa { background-color: var(--gri-foarte-deschis); }
         
         .famous-grid {
@@ -242,11 +241,11 @@
             box-shadow: var(--umbra-hover);
         }
 
-        /* Stil pentru pozele adăugate în secțiunea Excelență */
+     
         .famous-img-wrapper {
             width: 100%;
             height: 200px;
-            border-radius: calc(var(--radius) - 4px); /* Rotunjire fină pe interior */
+            border-radius: calc(var(--radius) - 4px); 
             overflow: hidden;
             margin-bottom: 25px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.05);
@@ -260,7 +259,7 @@
         }
 
         .famous-item:hover .famous-img-wrapper img {
-            transform: scale(1.08); /* Mărire la hover */
+            transform: scale(1.08); 
         }
 
         .famous-item h3 {
@@ -275,7 +274,7 @@
             font-size: 0.95em;
         }
 
-        /* === DESTINAȚII === */
+      
         #destinatii { background-color: var(--alb); }
         
         .cards-container {
@@ -337,7 +336,7 @@
 
         .card-content p { color: var(--text-mediu); font-size: 0.9em; }
 
-        /* === GALERIE FOTO MINIMALISTĂ === */
+      
         #galerie { 
             background-color: var(--text-inchis); 
             color: var(--alb); 
@@ -409,7 +408,7 @@
         .prev-btn { left: 20px; }
         .next-btn { right: 20px; }
 
-        /* === FOOTER MINIMALIST === */
+       
         footer {
             background: var(--alb);
             color: var(--text-inchis);
@@ -431,7 +430,7 @@
             text-transform: uppercase;
         }
 
-        /* === RESPONSIVE === */
+       
         @media (max-width: 900px) {
             .history-container { grid-template-columns: 1fr; gap: 40px; margin-bottom: 60px; }
             nav { padding: 20px; flex-direction: column; gap: 20px; }
@@ -444,7 +443,7 @@
 </head>
 <body>
 
-    <!-- NAVIGAȚIE -->
+  
     <nav>
         <a href="#" class="logo">Moldova</a>
         <div class="nav-links">
@@ -455,7 +454,7 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
+  
     <header class="hero">
         <div class="hero-content">
             <h1>O Călătorie în Inima Europei</h1>
@@ -464,11 +463,11 @@
         </div>
     </header>
 
-    <!-- ISTORIE -->
+   
     <section id="istorie">
         <h2 class="section-title">Moștenirea Timpului</h2>
         
-        <!-- Bloc 1: Epoca de Aur -->
+      
         <div class="history-container">
             <div class="history-text">
                 <h3>Epoca de Aur</h3>
@@ -480,10 +479,10 @@
             </div>
         </div>
 
-        <!-- Bloc 2: Cetatea Soroca (Aranjat invers pentru eleganță: Poză - Text) -->
+      
         <div class="history-container">
             <div class="history-image">
-                <!-- Pune poza cu Soroca în folderul imagini -->
+               
                 <img src="imagini/cetatea.jpeg" alt="Cetatea Soroca">
             </div>
             <div class="history-text">
@@ -493,7 +492,7 @@
             </div>
         </div>
 
-        <!-- Bloc 3: Mănăstirea Căpriana (Aranjat clasic: Text - Poză) -->
+      
         <div class="history-container">
             <div class="history-text">
                 <h3>Spiritualitate și Religie</h3>
@@ -501,20 +500,20 @@
                 <p>Reprezentând nucleul spiritualității ortodoxe, complexul monahal emană o liniște profundă. Pelerinii sunt atrași de arhitectura bisericească rafinată și de atmosfera de pace absolută oferită de natura înconjurătoare.</p>
             </div>
             <div class="history-image">
-                <!-- Pune poza cu Căpriana în folderul imagini -->
+               
                 <img src="imagini/capriana.jpeg" alt="Mănăstirea Căpriana">
             </div>
         </div>
     </section>
 
-    <!-- FAIMOASA (EXCELENȚĂ) -->
+    
     <section id="faimoasa">
         <h2 class="section-title">Semnătura Moldovei</h2>
         <div class="famous-grid">
             
             <div class="famous-item">
                 <div class="famous-img-wrapper">
-                    <!-- Pune poza cu vinul în folderul imagini -->
+                 
                     <img src="imagini/culturavinului.jpeg" alt="Cultura Vinului">
                 </div>
                 <h3>Cultura Vinului</h3>
@@ -523,7 +522,7 @@
             
             <div class="famous-item">
                 <div class="famous-img-wrapper">
-                    <!-- Pune poza culinară în folderul imagini -->
+                 
                     <img src="imagini/artaculinara.jpeg" alt="Arta Culinară">
                 </div>
                 <h3>Arta Culinară</h3>
@@ -532,7 +531,7 @@
             
             <div class="famous-item">
                 <div class="famous-img-wrapper">
-                    <!-- Pune poza cu tradițiile în folderul imagini -->
+                   
                     <img src="imagini/covor.jpeg" alt="Tradiția Țesutului">
                 </div>
                 <h3>Tradiția Țesutului</h3>
@@ -542,7 +541,7 @@
         </div>
     </section>
 
-    <!-- DESTINAȚII -->
+   
     <section id="destinatii">
         <h2 class="section-title">Locuri Emblematice</h2>
         <div class="cards-container">
@@ -576,7 +575,7 @@
         </div>
     </section>
 
-    <!-- GALERIE -->
+   
     <section id="galerie">
         <h2 class="section-title">Colecția Vizuală</h2>
         
@@ -587,7 +586,7 @@
 
             <div class="slides">
                 <div class="slide">
-                    <!-- Am schimbat și aici link-urile, pregătite pentru calculatorul tău -->
+                   
                     <img src="imagini/galerie1.jpeg" alt="Liniște și Tradiție">
                     <label for="slide3" class="nav-btn prev-btn">&#10094;</label>
                     <label for="slide2" class="nav-btn next-btn">&#10095;</label>
@@ -608,7 +607,7 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+   
     <footer>
         <h2>MOLDOVA</h2>
         <p>MV NV ZD</p>
